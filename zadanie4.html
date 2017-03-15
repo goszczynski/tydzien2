@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootcamp, tydzień 2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+
+<h1>Zadanie 4</h1>
+
+
+<script>
+	function createData(obj) {
+ 
+    var data = obj;
+ 
+    return {
+    	get: function(key) {
+    		return data[key];
+    	},
+    	set: function(key, value) {
+    		if(key != undefined && value != undefined) {
+    			return data[key] = value;
+    		} else {
+    			console.log("Podaj parametry!");
+    		}
+    		
+    	}
+    }
+
+
+}
+ 
+var data = createData({});
+ 
+data.set("name", "Janek");
+ 
+console.log( data.get("name") );
+</script>
+</body>
+</html>

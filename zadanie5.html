@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootcamp, tydzień 2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+
+<h1>Zadanie 5</h1>
+
+
+<button id="button">Klik</button>
+<section id="section"><p>Sekcja</p></section>
+
+
+
+<script>
+	var elem = new Toggler("#section");
+var button = document.querySelector("#button");
+ 
+button.addEventListener("click", function() {
+ 
+    if(elem.getElem().style.display == "none") {
+        elem.show();
+    } else {
+        elem.hide();
+    }
+ 
+}, false);
+
+function Toggler(selector) {
+
+	this.elems = document.querySelector(selector);
+
+};
+
+Toggler.prototype.getElem = function() {
+	return this.elems;
+};
+Toggler.prototype.show = function() {
+	this.elems.style.display = "block";
+};
+Toggler.prototype.hide = function() {
+	this.elems.style.display = "none";
+};
+</script>
+</body>
+</html>
